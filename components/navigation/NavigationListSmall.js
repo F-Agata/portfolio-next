@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import SocialButtons from '../SocialButtons';
+import SocialButtons from '../SocialButtons'
 
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -113,7 +113,6 @@ const ToggleMenuButton = styled.button`
 `
 
 const NavigationNav = styled.nav`
-  //border: aquamarine 2px solid;
   flex-grow: 1;
   text-align: left;
 `
@@ -123,7 +122,6 @@ const NavigationUl = styled.ul`
   flex-direction: column;
   height: 60px;
 `
-// border: red 2px solid`
 
 const NavigationLi = styled.li`
   list-style: none;
@@ -150,6 +148,4 @@ const NavigationLink = styled.a`
 const BottomMenu = styled.div`
   margin: 30px 0px 40px 0px;
   text-align: left;
-
-  //border: yellow 2px solid;
 `
