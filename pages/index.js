@@ -1,19 +1,17 @@
 import styled from 'styled-components'
-import useBetterMediaQuery from '../hooks/useBetterMediaQuery'
 
 import Navigation from '../components/navigation/Navigation'
 import Header from '../components/header/Header'
 import MainSection from '../components/mainSection/MainSection'
+import MainPortfolio from '../components/mainPortfolio/MainPortfolio'
 
 const Home = () => {
-  const modificationPage = useBetterMediaQuery('(min-width: 768px)')
-
   return (
     <MainContainer>
       <Navigation />
       <Header />
       <MainSection />
-      {/*<MainPortfolio />*/}
+      <MainPortfolio />
       {/*<Footer />*/}
       {/*<GoToTopOfPage />*/}
     </MainContainer>
