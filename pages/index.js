@@ -3,6 +3,7 @@ import useBetterMediaQuery from '../hooks/useBetterMediaQuery'
 
 import Navigation from '../components/navigation/Navigation'
 import Header from '../components/header/Header'
+import MainSection from '../components/mainSection/MainSection'
 
 const Home = () => {
   const modificationPage = useBetterMediaQuery('(min-width: 768px)')
@@ -11,7 +12,7 @@ const Home = () => {
     <MainContainer>
       <Navigation />
       <Header />
-      {/*<MainPage />*/}
+      <MainSection />
       {/*<MainPortfolio />*/}
       {/*<Footer />*/}
       {/*<GoToTopOfPage />*/}
