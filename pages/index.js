@@ -4,6 +4,8 @@ import Navigation from '../components/navigation/Navigation'
 import Header from '../components/header/Header'
 import MainSection from '../components/mainSection/MainSection'
 import MainPortfolio from '../components/mainPortfolio/MainPortfolio'
+import Footer from '../components/footer/Footer'
+import GoToTopOfPage from '../components/GoToTopOfPage'
 
 const Home = () => {
   return (
@@ -12,8 +14,8 @@ const Home = () => {
       <Header />
       <MainSection />
       <MainPortfolio />
-      {/*<Footer />*/}
-      {/*<GoToTopOfPage />*/}
+      <Footer />
+      <GoToTopOfPage />
     </MainContainer>
   )
 }
