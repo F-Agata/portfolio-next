@@ -27,18 +27,13 @@ const portfolioArray = [
     stack: 'react, next, styled components',
     github: 'https://github.com/F-Agata/finsweet',
   },
-  // {
-  //   name: 'Quiz template',
-  //   id: 'quiz',
-  //   path: '/projects/quiz.png',
-  //   skills: 'html, css, jsx',
-  // },
-  // {
-  //   name: 'form',
-  //   id: 'form',
-  //   path: '/projects/form.png',
-  //   skills: 'html, css, jsx',
-  // },
+  {
+    name: 'Easybank website',
+    id: 'easybank-website',
+    path: '/projects/easybank-website.png',
+    stack: 'create react app, styled components',
+    github: 'https://github.com/F-Agata/easybank',
+  },
   {
     name: 'Memory game',
     id: 'memory',
@@ -46,18 +41,6 @@ const portfolioArray = [
     stack: 'create react app, react',
     github: 'https://github.com/F-Agata/memory-game',
   },
-  // {
-  //   name: 'quiz1',
-  //   id: 'quiz1',
-  //   path: '/projects/quiz.png',
-  //   skills: 'html, css, jsx',
-  // },
-  // {
-  //   name: 'form1',
-  //   id: 'form1',
-  //   path: '/projects/form.png',
-  //   skills: 'html, css, jsx',
-  // },
 ]
 
 const MainPortfolio = () => {
