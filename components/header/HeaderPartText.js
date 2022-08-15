@@ -4,7 +4,7 @@ import TypeIt from 'typeit-react'
 import SkillButtons from '../SkillButtons'
 import SocialButtons from '../SocialButtons'
 
-const HeaderPartText = () => {
+const HeaderPartText = ({ showIcons }) => {
   return (
     <WrappHeaderInformations>
       <Welcome>
@@ -49,10 +49,13 @@ const HeaderPartText = () => {
           - <b>styled components</b> + <b>styled-system</b>
         </p>
       </InformationAboutMeBottom>
-      <WrappSocialAndSkillButtons>
-        <SocialButtons />
-        <SkillButtons />
-      </WrappSocialAndSkillButtons>
+
+      {showIcons && (
+        <WrappSocialAndSkillButtons>
+          <SocialButtons />
+          <SkillButtons />
+        </WrappSocialAndSkillButtons>
+      )}
     </WrappHeaderInformations>
   )
 }

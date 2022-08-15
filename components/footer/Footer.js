@@ -4,7 +4,7 @@ import SocialButtons from '../SocialButtons'
 
 import DivToNavigation from '../DivToNavigation'
 
-const Footer = () => {
+const Footer = ({ showIcons }) => {
   return (
     <>
       <DivToNavigation id={'footer'} />
@@ -14,7 +14,7 @@ const Footer = () => {
             <Logo src={'logo.svg'} alt="logo" />
           </WrappLogoLink>
         </WrappLogo>
-        <SocialButtons footerAlignCenter />
+        {showIcons && <SocialButtons footerAlignCenter />}
         <WrappContact>
           <p>609 594 597</p>
           <p>hello@agataf.pl</p>

@@ -11,21 +11,21 @@ const portfolioArray = [
     id: 'viar',
     path: '/projects/viar-website.png',
     stack: 'react, next, styled components, styled system',
-    github: 'https://github.com/F-Agata/viar-next'
+    github: 'https://github.com/F-Agata/viar-next',
   },
   {
     name: 'Rubinowe website',
     id: 'rubinowe',
     path: '/projects/rubinowe-website.png',
     stack: 'react, next, styled components, sendgrid',
-    github: 'https://github.com/F-Agata/rubinowe'
+    github: 'https://github.com/F-Agata/rubinowe',
   },
   {
     name: 'Finsweet website',
     id: 'finsweet-website',
     path: '/projects/finsweet-website.png',
-    stack: 'react, next, styled components, sendgrid',
-    github: 'https://github.com/F-Agata/finsweet'
+    stack: 'react, next, styled components',
+    github: 'https://github.com/F-Agata/finsweet',
   },
   // {
   //   name: 'Quiz template',
@@ -44,7 +44,7 @@ const portfolioArray = [
     id: 'memory',
     path: '/projects/memory.png',
     stack: 'create react app, react',
-    github: 'https://github.com/F-Agata/memory-game'
+    github: 'https://github.com/F-Agata/memory-game',
   },
   // {
   //   name: 'quiz1',
@@ -101,7 +101,7 @@ const MainPortfolio = () => {
         </WrappInfo>
         <WrappImgPF>
           <NextLink href={item.github}>
-          <ImgPF src={item.path} alt={item.name} dataIsActiv={isActive} />
+            <ImgPF src={item.path} alt={item.name} dataIsActiv={isActive} />
           </NextLink>
         </WrappImgPF>
         <GithubWrapper>

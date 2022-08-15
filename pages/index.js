@@ -6,15 +6,22 @@ import MainSection from '../components/mainSection/MainSection'
 import MainPortfolio from '../components/mainPortfolio/MainPortfolio'
 import Footer from '../components/footer/Footer'
 import GoToTopOfPage from '../components/GoToTopOfPage'
+import { useEffect, useState } from 'react'
 
 const Home = () => {
+  const [showIcons, setShowIcons] = useState(false)
+
+  useEffect(() => {
+    setShowIcons(true)
+  }, [])
+
   return (
     <MainContainer>
-      <Navigation />
-      <Header />
+      <Navigation showIcons={showIcons} />
+      <Header showIcons={showIcons} />
       <MainSection />
       <MainPortfolio />
-      <Footer />
+      <Footer showIcons={showIcons} />
       <GoToTopOfPage />
     </MainContainer>
   )

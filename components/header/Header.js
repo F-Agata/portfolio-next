@@ -4,7 +4,7 @@ import HeaderPartPhoto from './HeaderPartPhoto'
 import HeaderPartText from './HeaderPartText'
 import DivToNavigation from '../DivToNavigation'
 
-const Header = () => {
+const Header = ({ showIcons }) => {
   return (
     <>
       <DivToNavigation id={'header'} />
@@ -13,7 +13,7 @@ const Header = () => {
           <HeaderPartPhoto />
         </WrappHeaderPartPhoto>
         <WrappHeaderPartText>
-          <HeaderPartText />
+          <HeaderPartText showIcons={showIcons} />
         </WrappHeaderPartText>
       </WrappHeader>
     </>

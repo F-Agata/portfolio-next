@@ -25,9 +25,11 @@ const MPSkills = () => {
           <DashFromTheCircle />
           <SmallTitleMPOneItem>Tworzenie stron www</SmallTitleMPOneItem>
           <MPText>
-            Tworzenie i optymalizowanie responsywnych stron internetowych.<br />
+            Tworzenie i optymalizowanie responsywnych stron internetowych.
+            <br />
             Praca z warstwą front-end, komunikacja z warstwą back-end.
-            <br /><br />
+            <br />
+            <br />
             Budowanie nowych projektów oraz utrzymanie, rozwój, refaktor już
             istniejących. Praca w środowisku: IOS, Windows.
           </MPText>
