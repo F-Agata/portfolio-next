@@ -63,12 +63,16 @@ const Navigation = () => {
     resetMenu()
   }, [modificationMenuSize])
 
+  const [showLogo, setShowLogo] = useState(false)
+
+  useEffect(()=>{setShowLogo(true)}, [])
+
   return (
     <WrappNavigationShadow addShadow={addShadow}>
       <WrappNavigation>
         <WrappLogo>
           <WrappLogoLink href={'/'}>
-            <Logo src={'logo.svg'} alt="logo" />
+            {showLogo && <Logo src={'logo.svg'} alt="logo" />}
           </WrappLogoLink>
         </WrappLogo>
         {modificationMenuSize ? null : (

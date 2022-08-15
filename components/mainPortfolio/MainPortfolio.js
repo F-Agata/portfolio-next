@@ -20,6 +20,13 @@ const portfolioArray = [
     stack: 'react, next, styled components, sendgrid',
     github: 'https://github.com/F-Agata/rubinowe'
   },
+  {
+    name: 'Finsweet website',
+    id: 'finsweet-website',
+    path: '/projects/finsweet-website.png',
+    stack: 'react, next, styled components, sendgrid',
+    github: 'https://github.com/F-Agata/finsweet'
+  },
   // {
   //   name: 'Quiz template',
   //   id: 'quiz',
