@@ -3,44 +3,54 @@ import styled from 'styled-components'
 
 import DivToNavigation from '../DivToNavigation'
 import { TitleOfSection } from '../../styles'
+import NextLink from 'next/link'
 
 const portfolioArray = [
   {
-    name: 'memory',
+    name: 'Viar website',
+    id: 'viar',
+    path: '/projects/viar-website.png',
+    stack: 'react, next, styled components, styled system',
+    github: 'https://github.com/F-Agata/viar-next'
+  },
+  {
+    name: 'Rubinowe website',
+    id: 'rubinowe',
+    path: '/projects/rubinowe-website.png',
+    stack: 'react, next, styled components, sendgrid',
+    github: 'https://github.com/F-Agata/rubinowe'
+  },
+  // {
+  //   name: 'Quiz template',
+  //   id: 'quiz',
+  //   path: '/projects/quiz.png',
+  //   skills: 'html, css, jsx',
+  // },
+  // {
+  //   name: 'form',
+  //   id: 'form',
+  //   path: '/projects/form.png',
+  //   skills: 'html, css, jsx',
+  // },
+  {
+    name: 'Memory game',
     id: 'memory',
     path: '/projects/memory.png',
-    skills: 'html, css, jsx',
+    stack: 'create react app, react',
+    github: 'https://github.com/F-Agata/memory-game'
   },
-  {
-    name: 'quiz',
-    id: 'quiz',
-    path: '/projects/quiz.png',
-    skills: 'html, css, jsx',
-  },
-  {
-    name: 'form',
-    id: 'form',
-    path: '/projects/form.png',
-    skills: 'html, css, jsx',
-  },
-  {
-    name: 'memory1',
-    id: 'memory1',
-    path: '/projects/memory.png',
-    skills: 'html, css, jsx',
-  },
-  {
-    name: 'quiz1',
-    id: 'quiz1',
-    path: '/projects/quiz.png',
-    skills: 'html, css, jsx',
-  },
-  {
-    name: 'form1',
-    id: 'form1',
-    path: '/projects/form.png',
-    skills: 'html, css, jsx',
-  },
+  // {
+  //   name: 'quiz1',
+  //   id: 'quiz1',
+  //   path: '/projects/quiz.png',
+  //   skills: 'html, css, jsx',
+  // },
+  // {
+  //   name: 'form1',
+  //   id: 'form1',
+  //   path: '/projects/form.png',
+  //   skills: 'html, css, jsx',
+  // },
 ]
 
 const MainPortfolio = () => {
@@ -78,13 +88,18 @@ const MainPortfolio = () => {
         }
         dataIsActiv={isActive}
       >
-        <WrappImgPF>
-          <ImgPF src={item.path} alt={item.name} dataIsActiv={isActive} />
-        </WrappImgPF>
         <WrappInfo>
-          <Skills>{item.skills}</Skills>
           <Title dataIsActiv={isActive}>{item.name}</Title>
+          <Skills>{item.stack}</Skills>
         </WrappInfo>
+        <WrappImgPF>
+          <NextLink href={item.github}>
+          <ImgPF src={item.path} alt={item.name} dataIsActiv={isActive} />
+          </NextLink>
+        </WrappImgPF>
+        <GithubWrapper>
+          <NextLink href={item.github}>{item.github}</NextLink>
+        </GithubWrapper>
       </WrappOneProject>
     )
   })
@@ -102,8 +117,17 @@ const MainPortfolio = () => {
 
 export default MainPortfolio
 
+const GithubWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  font-weight: bold;
+  justify-content: center;
+  width: 100%;
+`
+
 const WrappMainPortfolio = styled.section`
-  margin: 0px 40px 0 40px;
+  margin: 0 40px 0 40px;
   padding-bottom: 40px;
   min-width: 375px;
   max-width: 1440px;
@@ -150,6 +174,7 @@ const WrappOneProject = styled.div`
 `
 
 const WrappImgPF = styled.div`
+  cursor: pointer;
   width: 100%;
   height: 300px;
   border-radius: 10px;
@@ -178,7 +203,7 @@ const ImgPF = styled.img`
 const WrappInfo = styled.div`
   width: 100%;
   align-self: stretch;
-  padding: 10px 0 0 0;
+  padding: 0 0 10px 0;
 `
 
 const Skills = styled.p`
