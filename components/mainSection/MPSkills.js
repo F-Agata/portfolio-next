@@ -23,56 +23,30 @@ const MPSkills = () => {
         <WrappMPOneItem mpskills>
           <Circle />
           <DashFromTheCircle />
-          <SmallTitleMPOneItem> 2005 – 2011 </SmallTitleMPOneItem>
-          <MPText> Śląski Uniwersytet Medyczny w Katowicach </MPText>
+          <SmallTitleMPOneItem>Tworzenie stron www</SmallTitleMPOneItem>
           <MPText>
-            {' '}
-            Wydział Farmaceutyczny z Oddziałem Medycyny Laboratoryjnej w
-            Sosnowcu
+            Tworzenie i optymalizowanie responsywnych stron internetowych.<br />
+            Praca z warstwą front-end, komunikacja z warstwą back-end.
+            <br /><br />
+            Budowanie nowych projektów oraz utrzymanie, rozwój, refaktor już
+            istniejących. Praca w środowisku: IOS, Windows.
           </MPText>
         </WrappMPOneItem>
         <WrappMPOneItem mpskills>
           <Circle />
           <DashFromTheCircle />
-          <SmallTitleMPOneItem> 2005 – 2011 </SmallTitleMPOneItem>
-          <MPText> Śląski Uniwersytet Medyczny w Katowicach </MPText>
+          <SmallTitleMPOneItem>Stack i narzędzia</SmallTitleMPOneItem>
           <MPText>
-            {' '}
-            Wydział Farmaceutyczny z Oddziałem Medycyny Laboratoryjnej w
-            Sosnowcu
-          </MPText>
-        </WrappMPOneItem>
-        <WrappMPOneItem mpskills>
-          <Circle />
-          <DashFromTheCircle />
-          <SmallTitleMPOneItem> 2005 – 2011 </SmallTitleMPOneItem>
-          <MPText> Śląski Uniwersytet Medyczny w Katowicach </MPText>
-          <MPText>
-            {' '}
-            Wydział Farmaceutyczny z Oddziałem Medycyny Laboratoryjnej w
-            Sosnowcu
-          </MPText>
-        </WrappMPOneItem>
-        <WrappMPOneItem mpskills>
-          <Circle />
-          <DashFromTheCircle />
-          <SmallTitleMPOneItem> 2005 – 2011 </SmallTitleMPOneItem>
-          <MPText> Śląski Uniwersytet Medyczny w Katowicach </MPText>
-          <MPText>
-            {' '}
-            Wydział Farmaceutyczny z Oddziałem Medycyny Laboratoryjnej w
-            Sosnowcu
-          </MPText>
-        </WrappMPOneItem>
-        <WrappMPOneItem mpskills>
-          <Circle />
-          <DashFromTheCircle />
-          <SmallTitleMPOneItem> 2005 – 2011 </SmallTitleMPOneItem>
-          <MPText> Śląski Uniwersytet Medyczny w Katowicach </MPText>
-          <MPText>
-            {' '}
-            Wydział Farmaceutyczny z Oddziałem Medycyny Laboratoryjnej w
-            Sosnowcu
+            <ul>
+              <li>HTML, Responsive Web Design</li>
+              <li>CSS (Sass, bem, styled components)</li>
+              <li>Java script (ES6+)</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Eslint, Prettier</li>
+              <li>Figma</li>
+              <li>Git, Github, Vercel</li>
+            </ul>
           </MPText>
         </WrappMPOneItem>
       </WrappMPEssence>

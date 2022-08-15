@@ -38,18 +38,30 @@ const MPExperience = () => {
           <Circle isActive={isActiveExp3} presentTime />
           <DashFromTheCircle presentTime />
           {!showDecorationLine ? (
-            <SmallTitleMPOneItem>od 09.2021 do obecnie</SmallTitleMPOneItem>
+            <SmallTitleMPOneItem>od 06.2022 do obecnie</SmallTitleMPOneItem>
           ) : null}
           <MPText presentTime>Staż w Rubinowe Sp. z o.o. </MPText>
-          <MPText presentTime>stanowisko: junior front-end developer </MPText>
+          <MPText presentTime>
+            stanowisko: <b>junior front-end developer</b>
+          </MPText>
+          <br />
           <MPText presentTime>Zakres obowiązków: </MPText>
           <ul>
-            <li>stylowanie komponentów</li>
-            <li>tworzenie widoków stron w React jsx</li>
+            <li>
+              kodowanie responsywnych stron internetowych na podstawie projektów
+              (Figma, PSD)
+            </li>
+            <li>
+              wykorzystywany stack i narzędzia:{' '}
+              <b>
+                react.js, next.js, styled-components, styled-system, github,
+                vercel
+              </b>
+            </li>
           </ul>
           {showDecorationLine ? (
             <SmallTitleMPOneItem presentTime>
-              od 09.2021 do obecnie
+              od 06.2022 do obecnie
             </SmallTitleMPOneItem>
           ) : null}
         </WrappMPOneItem>

@@ -52,7 +52,7 @@ const SkillButtons = () => {
 
   return (
     <WrappSkillButtons>
-      <Invitation>Używam</Invitation>
+      <Invitation>Pracuję z</Invitation>
       <WrappIcons>{skillIcon}</WrappIcons>
     </WrappSkillButtons>
   )

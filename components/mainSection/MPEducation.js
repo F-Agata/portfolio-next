@@ -39,21 +39,27 @@ const MPEducation = () => {
           <Circle isActive={isActiveEdu3} presentTime />
           <DashFromTheCircle presentTime />
           {!showDecorationLine ? (
-            <SmallTitleMPOneItem>2020 – 2021</SmallTitleMPOneItem>
+            <SmallTitleMPOneItem>2021 – 2022</SmallTitleMPOneItem>
           ) : null}
 
-          <MPText presentTime> Front-end developer </MPText>
           <MPText presentTime>
             {' '}
-            Nauka i rozwój umiejętności niezbędnych do pracy w zawodzie.
+            Przygotowanie do pracy jako front-end developer. Nauka i rozwój
+            niezbędnych umiejętności.
           </MPText>
-          <MPText presentTime> Kursy i inne źródła wiedzy:</MPText>
+          <MPText presentTime>
+            {' '}
+            Część kursów i materiałów z których korzystałam:
+          </MPText>
           <ul>
-            <li>WTF - co ten frontend</li>
-            <li>Samuraj programowania</li>
+            <li>What The Frontend - co ten frontend</li>
+            <li>Cykl kursów Samuraj programowania</li>
+            <li>Kurs Gita - Maciej Aniserowicz</li>
+            <li>Materiały uzupełniające z Udemy, Pluralsight</li>
+            <li>Epic React by Kent C. Dodds</li>
           </ul>
           {showDecorationLine ? (
-            <SmallTitleMPOneItem presentTime>2020 – 2021</SmallTitleMPOneItem>
+            <SmallTitleMPOneItem presentTime>2021 – 2022</SmallTitleMPOneItem>
           ) : null}
         </WrappMPOneItem>
 
