@@ -10,7 +10,7 @@ const Header = ({ showIcons }) => {
       <DivToNavigation id={'header'} />
       <WrappHeader>
         <WrappHeaderPartPhoto>
-          <HeaderPartPhoto />
+          <HeaderPartPhoto showIcons={showIcons} />
         </WrappHeaderPartPhoto>
         <WrappHeaderPartText>
           <HeaderPartText showIcons={showIcons} />
