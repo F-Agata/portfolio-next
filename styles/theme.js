@@ -1,5 +1,3 @@
-import breakpoints from './breakpoints'
-
 export const theme = {
   colors: {
     colorPrimary: '#ff014f',
@@ -38,5 +36,5 @@ export const theme = {
     fsB1: '18px',
     fsB2: '22px',
     fsB3: '14px',
-  },
+  }
 }

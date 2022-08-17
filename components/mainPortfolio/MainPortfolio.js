@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import DivToNavigation from '../DivToNavigation'
@@ -41,6 +41,13 @@ const portfolioArray = [
     stack: 'create react app, react',
     github: 'https://github.com/F-Agata/memory-game',
   },
+  {
+    name: 'Dice roll game',
+    id: 'dice-roll-game',
+    path: '/projects/memory.png',
+    stack: 'create react app, react',
+    github: 'https://github.com/F-Agata/memory-game',
+  },
 ]
 
 const MainPortfolio = () => {
@@ -64,8 +71,22 @@ const MainPortfolio = () => {
     })
   }
 
+  const [commonHeight, setCommonHeight] = useState(0);
+
+  const allRefs = []
+
+  useEffect(()=>{
+    allRefs.map(item=>{
+      if(item.current.offsetHeight > commonHeight){setCommonHeight(item.current.offsetHeight)}
+    })
+  }, [allRefs])
+
   const oneProject = portfolioArray.map((item, index) => {
     const isActive = isActiveProjects[`isActiveProject${index + 1}`]
+
+    const singleRef = useRef();
+
+    allRefs.push(singleRef);
 
     return (
       <WrappOneProject
@@ -80,7 +101,9 @@ const MainPortfolio = () => {
       >
         <WrappInfo>
           <Title dataIsActiv={isActive}>{item.name}</Title>
-          <Skills>{item.stack}</Skills>
+          <SkillsWrapper commonHeight={commonHeight}>
+            <Skills ref={singleRef}>{item.stack}</Skills>
+          </SkillsWrapper>
         </WrappInfo>
         <WrappImgPF>
           <NextLink href={item.github}>
@@ -133,7 +156,7 @@ const WrappMainPortfolio = styled.section`
 `
 
 const WrappOneProject = styled.div`
-  width: 100%;
+   width: 100%;
   margin: 0 0 40px 0px;
   box-shadow: ${(props) => props.theme.shadows.shadowWhite};
   background: ${(props) => props.theme.gradients.gradientBox};
@@ -202,6 +225,10 @@ const Skills = styled.p`
   font-family: ${(props) => props.theme.fonts.fontPrimary};
   text-align: center;
   letter-spacing: 1px;
+`
+
+const SkillsWrapper = styled.div`
+  height: ${(props)=>props.commonHeight}px;
 `
 
 const Title = styled.p`
