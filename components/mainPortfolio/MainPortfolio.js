@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+import { createRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import DivToNavigation from '../DivToNavigation'
@@ -71,22 +71,22 @@ const MainPortfolio = () => {
     })
   }
 
-  const [commonHeight, setCommonHeight] = useState(0);
+  const [commonHeight, setCommonHeight] = useState(0)
 
   const allRefs = []
 
-  useEffect(()=>{
-    allRefs.map(item=>{
-      if(item.current.offsetHeight > commonHeight){setCommonHeight(item.current.offsetHeight)}
+  useEffect(() => {
+    allRefs.map((item) => {
+      if (item.current.offsetHeight > commonHeight) {
+        setCommonHeight(item.current.offsetHeight)
+      }
     })
   }, [allRefs])
 
   const oneProject = portfolioArray.map((item, index) => {
     const isActive = isActiveProjects[`isActiveProject${index + 1}`]
 
-    const singleRef = useRef();
-
-    allRefs.push(singleRef);
+    allRefs.push(createRef())
 
     return (
       <WrappOneProject
@@ -102,7 +102,7 @@ const MainPortfolio = () => {
         <WrappInfo>
           <Title dataIsActiv={isActive}>{item.name}</Title>
           <SkillsWrapper commonHeight={commonHeight}>
-            <Skills ref={singleRef}>{item.stack}</Skills>
+            <Skills ref={allRefs[index]}>{item.stack}</Skills>
           </SkillsWrapper>
         </WrappInfo>
         <WrappImgPF>
@@ -156,7 +156,7 @@ const WrappMainPortfolio = styled.section`
 `
 
 const WrappOneProject = styled.div`
-   width: 100%;
+  width: 100%;
   margin: 0 0 40px 0px;
   box-shadow: ${(props) => props.theme.shadows.shadowWhite};
   background: ${(props) => props.theme.gradients.gradientBox};
@@ -228,7 +228,7 @@ const Skills = styled.p`
 `
 
 const SkillsWrapper = styled.div`
-  height: ${(props)=>props.commonHeight}px;
+  height: ${(props) => props.commonHeight}px;
 `
 
 const Title = styled.p`

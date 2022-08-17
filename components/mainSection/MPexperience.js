@@ -22,7 +22,6 @@ const MPExperience = () => {
 
   return (
     <WrappMPSection>
-
       {!showDecorationLine ? <WrappLineDecoration /> : null}
 
       <WrappMPEssence>

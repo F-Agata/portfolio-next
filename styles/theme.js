@@ -36,5 +36,5 @@ export const theme = {
     fsB1: '18px',
     fsB2: '22px',
     fsB3: '14px',
-  }
+  },
 }
