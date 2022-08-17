@@ -22,7 +22,9 @@ const MPExperience = () => {
 
   return (
     <WrappMPSection>
+
       {!showDecorationLine ? <WrappLineDecoration /> : null}
+
       <WrappMPEssence>
         <TitleOfSection>Doświadczenie zawodowe</TitleOfSection>
 
@@ -37,9 +39,11 @@ const MPExperience = () => {
         >
           <Circle isActive={isActiveExp3} presentTime />
           <DashFromTheCircle presentTime />
+
           {!showDecorationLine ? (
             <SmallTitleMPOneItem>od 06.2022 do obecnie</SmallTitleMPOneItem>
           ) : null}
+
           <MPText presentTime>Staż w Rubinowe Sp. z o.o. </MPText>
           <MPText presentTime>
             stanowisko: <b>junior front-end developer</b>

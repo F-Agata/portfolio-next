@@ -11,17 +11,30 @@ import {
   WrappMPSection,
   MPText,
 } from '../../styles'
+import {useState} from "react";
 
 const MPSkills = () => {
   const showDecorationLine = useBetterMediaQuery('(min-width: 1080px)')
 
+  const [isActiveSkill1, setIsActiveSkill1] = useState(false)
+  const [isActiveSkill2, setIsActiveSkill2] = useState(false)
+
+
   return (
     <WrappMPSection>
+      {!showDecorationLine ? <WrappLineDecoration /> : null}
       <WrappMPEssence>
         <TitleOfSection>Umiejętności</TitleOfSection>
         {showDecorationLine ? <WrappLineDecoration /> : null}
-        <WrappMPOneItem mpskills>
-          <Circle />
+        <WrappMPOneItem
+            onMouseEnter={() => {
+              setIsActiveSkill1(true)
+            }}
+            onMouseLeave={() => {
+              setIsActiveSkill1(false)
+            }}
+        >
+          <Circle isActive={isActiveSkill1}/>
           <DashFromTheCircle />
           <SmallTitleMPOneItem>Tworzenie stron www</SmallTitleMPOneItem>
           <MPText>
@@ -34,8 +47,15 @@ const MPSkills = () => {
             istniejących. Praca w środowisku: IOS, Windows.
           </MPText>
         </WrappMPOneItem>
-        <WrappMPOneItem mpskills>
-          <Circle />
+        <WrappMPOneItem
+            onMouseEnter={() => {
+          setIsActiveSkill2(true)
+        }}
+           onMouseLeave={() => {
+              setIsActiveSkill2(false)
+               }}
+        >
+          <Circle isActive={isActiveSkill2}/>
           <DashFromTheCircle />
           <SmallTitleMPOneItem>Stack i narzędzia</SmallTitleMPOneItem>
           <MPText>
