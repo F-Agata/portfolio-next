@@ -44,9 +44,9 @@ const portfolioArray = [
   {
     name: 'Dice roll game',
     id: 'dice-roll-game',
-    path: '/projects/memory.png',
+    path: '/projects/dice.png',
     stack: 'create react app, react',
-    github: 'https://github.com/F-Agata/memory-game',
+    github: 'https://github.com/F-Agata/diceRollGame',
   },
 ]
 
